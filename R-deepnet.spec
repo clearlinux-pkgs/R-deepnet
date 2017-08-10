@@ -4,7 +4,7 @@
 #
 Name     : R-deepnet
 Version  : 0.2
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/deepnet_0.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/deepnet_0.2.tar.gz
 Summary  : deep learning toolkit in R
@@ -23,11 +23,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1502398420
+export SOURCE_DATE_EPOCH=1502402608
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1502398420
+export SOURCE_DATE_EPOCH=1502402608
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
