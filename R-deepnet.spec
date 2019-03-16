@@ -4,13 +4,13 @@
 #
 Name     : R-deepnet
 Version  : 0.2
-Release  : 36
+Release  : 37
 URL      : https://cran.r-project.org/src/contrib/deepnet_0.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/deepnet_0.2.tar.gz
 Summary  : deep learning toolkit in R
 Group    : Development/Tools
 License  : GPL-3.0
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 algorithms, including BP,RBM,DBN,Deep autoencoder and so on.
@@ -23,11 +23,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523299051
+export SOURCE_DATE_EPOCH=1552749655
 
 %install
+export SOURCE_DATE_EPOCH=1552749655
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1523299051
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -62,8 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library deepnet|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  deepnet || :
 
 
 %files
