@@ -4,35 +4,35 @@
 #
 Name     : R-deepnet
 Version  : 0.2
-Release  : 46
+Release  : 47
 URL      : https://cran.r-project.org/src/contrib/deepnet_0.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/deepnet_0.2.tar.gz
 Summary  : deep learning toolkit in R
 Group    : Development/Tools
 License  : GPL-3.0
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 algorithms, including BP,RBM,DBN,Deep autoencoder and so on.
 
 %prep
 %setup -q -c -n deepnet
+cd %{_builddir}/deepnet
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571816841
+export SOURCE_DATE_EPOCH=1589530243
 
 %install
-export SOURCE_DATE_EPOCH=1571816841
+export SOURCE_DATE_EPOCH=1589530243
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
