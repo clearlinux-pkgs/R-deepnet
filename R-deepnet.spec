@@ -4,7 +4,7 @@
 #
 Name     : R-deepnet
 Version  : 0.2.1
-Release  : 67
+Release  : 68
 URL      : https://cran.r-project.org/src/contrib/deepnet_0.2.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/deepnet_0.2.1.tar.gz
 Summary  : Deep Learning Toolkit in R
